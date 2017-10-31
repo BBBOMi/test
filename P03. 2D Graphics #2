@@ -1,0 +1,46 @@
+P03> 2D Graphics #2
+
+1. Linear Gradient 칠하기
+-> '그라데이션'
+
+-> GradientPaint(float x1, float y1, Color color1, float x2, float y2, Color color2, boolean cycle) 
+	=> 여기서 cycle변수를 true로 하면 color2가 끝난 후, 다시 color1 시작.
+	=> 그럼, false는? color2가 계속됨
+	
+-> tatic class MyView extends JPanel 
+	=> 그림을 그리고 싶다면 JPanel class를 상속받아
+		
+	@Override 
+	public void paint(Graphics graphics)
+	=> paint 메소드 오버라이드 하면 됨
+	
+-> g.setPaint(new GradientPaint(x1, 0, Color.CYAN, x2, 0, Color.BLUE)); 
+	=> 매개변수가 Gradientpaint이기 때문에 그라데이션으로 칠해진다
+
+
+2. Radial Gradient 칠하기
+-> 중심점을 기준으로 원모양으로 색이 변하는 것을 말함
+	=> 가운데가 기준점, 기준점은 흰색
+	=> 증심점에서 멀어질 수록 색이 진해짐
+	=> 그림의 기준점과 색의 기준점이 일치하지 않아도 됨
+	=> p6. 그림-설명 참고
+	
+	
+3. 문자열 그리기
+-> Rectangle2D 메소드는 좌표 메소드..?
+
+-> p12.그림의 (x, y)좌표의 이름은 base-line
+	=> 문자열 그리기 기준 좌표
+	=> (x1, y1)은 top, (x2, y2)는 bottom
+	
+-> float x = 50, y = 150;             
+   String text = "안녕 Java 2D 그래픽";             
+   Font font = new Font("궁서체", Font.BOLD, 60);             
+   g.setFont(font);             // font 지정
+   g.setColor(Color.LIGHT_GRAY);     // 그림자 색 지정        
+   g.drawString(text,  x + 2f,  y + 2f);             // 해당 좌표에 회색으로 그림(그림자 효과)
+   g.setColor(Color.BLUE);     // 글씨색은 파란색     
+   g.drawString(text,  x,  y); // 해당 위치에 파란색으로 그림(원래의 글씨)
+   
+-> 
+

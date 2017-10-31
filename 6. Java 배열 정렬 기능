@@ -1,0 +1,6 @@
+06> Java 배열 정렬 기능
+
+1. Arrays 클래스의 sort 메소드
+-> 예를 들어, String 클래스에 boolean isEmptyOrNull()
+						boolean is BlankOrNull() 들이 없다
+						

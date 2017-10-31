@@ -1,0 +1,6 @@
+08 다형성
+
+1. interface 메소드의 종류
+	- abstract 메소드
+	- default 메소드 (Java 8 문법에 추가됨)
+	
